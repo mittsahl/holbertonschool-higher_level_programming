@@ -2,9 +2,10 @@
 
 def uppercase(string):
     strang = ""
-    for letter in range(0, len(string)):
-        if (ord(string[letter]) > 96 and (ord(string[letter]) < 123)):
-            strang += chr(ord(string[letter]) - 32)
+    for letter in string:
+        if (ord(letter) > 96 and ord(letter) < 123):
+            letter = ord(letter) - 32
+            strang += chr(letter)
         else:
-            strang += string[letter]
-    print(strang)
+            strang += letter
+    print("{}".format(strang)) 
