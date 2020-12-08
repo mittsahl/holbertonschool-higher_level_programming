@@ -2,4 +2,4 @@
 string = ""
 for char in range(97, 123):
     string += chr(char)
-print(string)
+print(string, end='')
