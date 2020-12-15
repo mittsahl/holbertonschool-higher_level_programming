@@ -1,0 +1,1 @@
+This project is about using lists and tuples in python
