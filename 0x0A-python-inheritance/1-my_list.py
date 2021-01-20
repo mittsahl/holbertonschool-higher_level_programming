@@ -2,9 +2,8 @@
 """This is a makiing a list and method to print sorted list"""
 
 
-"""This is defining the class list"""
 class MyList(list):
-    """Function that prints the sorted list"""
+    """Class that inherits from list data type"""
     def print_sorted(self):
+        """Prints the sorted list from first to last"""
         print(sorted(self))
-
