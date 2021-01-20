@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Function that checks"""
+"""Compares two objects"""
 
 
 def is_same_class(obj, a_class):
+    """Boolean return"""
     return type(obj) is a_class
