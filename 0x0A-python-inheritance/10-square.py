@@ -8,4 +8,4 @@ class Square(Rectangle):
     def __init__(self, size):
         """Initialization method"""
         Rectangle.__init__(self, size, size)
-        self.size = size
+        self.__size = size
