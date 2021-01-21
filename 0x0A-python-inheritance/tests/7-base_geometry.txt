@@ -1,28 +1,55 @@
-``7-base_geometry`` module
-======================
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Using ``7-base_geometry``
--------------------
-import module:
-    >>> BaseGeo = __import__("7-base_geometry").BaseGeometry
+>>> bg = BaseGeometry()
 
-area:
-    >>> bg = BaseGeo()
-    >>> bg.area()
-    Traceback (most recent call last):
-    Exception: area() is not implemented
+>>> bg.integer_validator("width", 14)
 
-integer_validator:
-    >>> bg.integer_validator("number", 10)
+>>> bg.integer_validator("height", 10)
 
-wrong data_types integer_validator
-    >>> bg.integer_validator("number", -2)
-    Traceback (most recent call last):
-    ValueError: number must be greater than 0
-    >>> bg.integer_validator("name", "John")
-    Traceback (most recent call last):
-    TypeError: name must be an integer
-    >>> bg.integer_validator()
-    Traceback (most recent call last):
-    ValueError:  must be greater than 0
+>>> try:
+...     bg.integer_validator("name", "John")
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] name must be an integer
 
+>>> try:
+...     bg.integer_validator("age", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] age must be greater than 0
+
+>>> try:
+...     bg.integer_validator("width", -4)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] width must be greater than 0
+
+>>> try:
+...     bg.area()
+... except Exception as e:
+...     print(e)
+area() is not implemented
+
+>>> try:
+...     bg.integer_validator("age", (4,))
+... except Exception as e:
+...     print(e)
+age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", [3])
+... except Exception as e:
+...     print(e)
+age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", {3,4})
+... except Exception as e:
+...     print("err")
+err
+
+>>> try:
+...     bg.integer_validator("age",None)
+... except Exception as e:
+...     print("None")
+None
