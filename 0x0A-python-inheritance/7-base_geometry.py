@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-"""Class with different methods and errors"""
+"""This file defines test class and methods"""
 
 
 class BaseGeometry:
-    """method for raising area() error"""
+    """Class definition"""
     def area(self):
+        """Throws an error when not made"""
         raise Exception("area() is not implemented")
 
-    """method for validation of value"""
-    def integer_validator(self, name, value):
-        if not isinstance(value, int):
+    def integer_validator(self, name="", value=0):
+        """Checks the data type of value"""
+        if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
