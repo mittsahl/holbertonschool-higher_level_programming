@@ -2,6 +2,6 @@
 """Converts a class to json"""
 
 
-def class_to_jason(my_obj):
+def class_to_json(obj):
     """Converts class to json"""
-    return my_obj.__dict__
+    return vars(obj)
