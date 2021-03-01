@@ -1,3 +1,3 @@
 -- Displays table by score sql
-SELECT * from second_table
+SELECT score, name FROM second_table
 ORDER BY score DESC;

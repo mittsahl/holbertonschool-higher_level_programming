@@ -1,3 +1,6 @@
-This project is about using unit testing on a large project,
-de/serializing a class, writing and reading json files,
-and *args/**kwargs
+# almost a circle
+
+The holberton "almost a circle" project
+
+includes several folders and project files for 
+the 19 mandatory tasks and 2 advanced
