@@ -1,3 +1,6 @@
--- Lists all records with score greater tahn 10
-SELECT score, name FROM second_table
-WHERE score >= 10;
+-- Lists all records with score greater 9
+-- Display by order of score
+SELECT score, name 
+FROM second_table
+WHERE score > 9
+ORDER BY score DESC;;
